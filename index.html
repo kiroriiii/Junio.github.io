@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Build a Survey Form using HTML and CSS</title>
+    <link rel="stylesheet" href="renfaire_survey.css">
+</head>
+ 
+<body>
+    <h1>Renfaire Ph 2024 Survey</h1>
+    <p><i>Please take a few moments to answer the following questions to help us improve the Renfaire PH 2024 event.</i></p>
+ 
+    <form id="form">
+ 
+        <div class="form-control">
+            <label for="name" id="label-name">
+                Name
+            </label>
+ 
+            <input type="text" id="name"
+                   placeholder="Enter your name" />
+        </div>
+ 
+        <div class="form-control">
+            <label for="email" id="label-email">
+                Email
+            </label>
+ 
+            <!-- Input Type Email-->
+            <input type="email" id="email"
+                   placeholder="Enter your email(optional)" />
+        </div>
+ 
+        <div class="form-control">
+            <label for="age" id="label-age">
+                Age
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text" id="age"
+                   placeholder="Enter your age" />
+        </div>
+ 
+        <div class="form-control">
+            <label for="role" id="label-role">
+                How did you hear about the Renfaire PH 2024 event?
+            </label>
+ 
+            <!-- Dropdown options -->
+            <select name="role" id="role">
+                <option value="Social Media">Social Media</option>
+                <option value="Poster/Flyer">Poster/Flyer</option>
+                <option value="Friends/Family">Friends/Family</option>
+                <option value="Website">Website</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+ 
+        <div class="form-control">
+            <label>
+                How likely are you to attend the Renfaire PH 2024 event?
+            </label>
+ 
+            <!-- Input Type Radio Button -->
+            <label for="recommed-1">
+                <input type="radio" id="recommed-1"
+                       name="recommed">Very Likely
+                  </input>
+            </label>
+            <label for="recommed-2">
+                <input type="radio" id="recommed-2"
+                       name="recommed">Somewhat likely
+                  </input>
+            </label>
+            <label for="recommed-3">
+                <input type="radio" id="recommed-3"
+                       name="recommed">Not sure
+                  </input>
+            </label>
+            <label for="recommed-3">
+                <input type="radio" id="recommed-4"
+                       name="recommed">Somewhat unlikely
+                  </input>
+            </label>            <label for="recommed-5">
+                <input type="radio" id="recommed-3"
+                       name="recommed">Very unlikely
+                  </input>
+            </label>
+        </div>
+ 
+        <div class="form-control">
+            <label>What activities are you most interested in attending at the Renfaire PH? 
+                <small>(Select all that apply)</small>
+            </label>
+            <!-- Input Type Checkbox -->
+            <label for="inp-1">
+                <input type="checkbox" name="inp">Medieval Games
+                  </input>
+              </label>
+            <label for="inp-2">
+                <input type="checkbox" name="inp">Workshops
+                  </input>
+            </label>
+            <label for="inp-3">
+                <input type="checkbox" name="inp">Live Music
+                  </input>
+            </label>
+            <label for="inp-4">
+                <input type="checkbox" name="inp">Food & Drink
+                  </input>
+            </label>
+            <label for="inp-5">
+                <input type="checkbox" name="inp">Artisan Market
+                  </input>
+            </label>
+            <label for="inp-6">
+                <input type="checkbox" name="inp">Theater Shows
+                  </input>
+            </label>
+            <label for="inp-7">
+                <input type="checkbox" name="inp">Parade
+                  </input>
+            </label>
+            <label for="inp-7">
+                <input type="checkbox" name="inp">Cosplayers
+                  </input>
+            </label>
+            <label for="inp-7">
+                <input type="checkbox" name="inp">Others
+                  </input>
+            </label>
+        </div>
+ 
+        <div class="form-control">
+            <label for="comment">
+                Any comments or suggestions
+            </label>
+ 
+            <!-- multi-line text input control -->
+            <textarea name="comment" id="comment"
+                      placeholder="Enter your comment here">
+            </textarea>
+        </div>
+ 
+        <!-- Multi-line Text Input Control -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+ 
+<script>
+    function enableEmailInput(checkbox) {
+        const emailInput = document.getElementById('email-input');
+        emailInput.disabled = !checkbox.checked;
+        if (checkbox.checked) {
+            emailInput.focus();
+        }
+    }
+    </script>
+
+</html>
